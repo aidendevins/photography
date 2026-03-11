@@ -115,7 +115,7 @@ export default function App() {
         
         <div className="relative z-10 text-center px-6">
           <h1 className={`text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 transition-all duration-1000 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Kaitlin & Aiden
+            Waypoint Journals
           </h1>
           <p className={`text-lg md:text-xl text-white/70 font-light tracking-widest uppercase transition-all duration-1000 delay-500 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Photography
@@ -152,7 +152,7 @@ export default function App() {
         {/* Nav */}
         <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-6">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="/" className="text-lg font-light tracking-wider">K&A</a>
+            <a href="/" className="text-lg font-light tracking-wider">WJ</a>
             <div className="hidden md:flex items-center gap-8 text-sm text-white/70">
               <button onClick={() => scrollTo(galleryRef)} className="hover:text-white transition">Gallery</button>
               <button onClick={() => scrollTo(aboutRef)} className="hover:text-white transition">About</button>
@@ -221,29 +221,28 @@ export default function App() {
           <div className="aspect-[3/4] bg-white/5 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
-              alt="Kaitlin & Aiden"
+              alt="Waypoint Journals"
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <p className="text-amber-400 text-sm tracking-widest uppercase mb-4">About Us</p>
+            <p className="text-amber-400 text-sm tracking-widest uppercase mb-4">About</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
               Capturing the World,<br />One Frame at a Time
             </h2>
             <div className="space-y-4 text-white/70 leading-relaxed">
               <p>
-                We're Kaitlin & Aiden — landscape and wildlife photographers with a shared passion 
-                for exploring wild places. From the fjords of Norway to the national parks of 
-                the American West, we chase light and seek out moments of natural beauty.
+                Waypoint Journals is a collection of landscape and wildlife photography from 
+                our adventures around the world. From the fjords of Norway to the national parks 
+                of the American West, we chase light and seek out moments of natural beauty.
               </p>
               <p>
                 Our work focuses on the intersection of light, land, and life — from golden hour 
                 glow over mountain peaks to intimate wildlife encounters in their natural habitats. 
-                Each image tells a story of patience, persistence, and the profound connection 
-                between photographer and subject.
+                Each image tells a story of patience, persistence, and connection with the wild.
               </p>
               <p>
-                Whether we're hiking to a remote overlook at dawn or waiting quietly for wildlife 
+                Whether hiking to a remote overlook at dawn or waiting quietly for wildlife 
                 to appear, photography is how we connect with the natural world — and how we 
                 share that connection with others.
               </p>
@@ -327,11 +326,11 @@ export default function App() {
       <footer className="border-t border-white/10 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <p className="text-lg font-light tracking-wider mb-1">Kaitlin & Aiden Photography</p>
+            <p className="text-lg font-light tracking-wider mb-1">Waypoint Journals</p>
             <p className="text-sm text-white/40">&copy; {new Date().getFullYear()} All rights reserved.</p>
           </div>
           <div className="flex items-center gap-6 text-sm text-white/50">
-            <a href="mailto:hello@kaitlinandaiden.com" className="hover:text-white transition">hello@kaitlinandaiden.com</a>
+            <a href="mailto:hello@waypointjournals.com" className="hover:text-white transition">hello@waypointjournals.com</a>
             <span className="text-white/20">|</span>
             <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
           </div>
