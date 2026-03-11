@@ -22,7 +22,7 @@ const PHOTOS = [
   { id: 16, src: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=1600', thumb: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=600', title: 'Abandoned Cabin', location: 'Wyoming', category: 'unique', favorite: false },
 ];
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2000';
+const HERO_IMAGE = '/hero.jpg';
 
 const CATEGORIES = [
   { id: 'favorites', label: 'Favorites' },
