@@ -17,9 +17,9 @@ const PHOTOS = [
   { id: 11, src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600', thumb: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600', title: 'Street Scene', location: 'Tokyo, Japan', category: 'urban', favorite: false },
   { id: 12, src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1600', thumb: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600', title: 'Moose at Dawn', location: 'Norway', category: 'wildlife', favorite: false },
   { id: 13, src: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=1600', thumb: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=600', title: 'Northern Lights', location: 'Norway', category: 'landscapes', favorite: false },
-  { id: 14, src: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1600', thumb: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=600', title: 'Roadside Bloom', location: 'California', category: 'discoveries', favorite: false },
+  { id: 14, src: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1600', thumb: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=600', title: 'Roadside Bloom', location: 'California', category: 'unique', favorite: false },
   { id: 15, src: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600', thumb: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600', title: 'Downtown Dusk', location: 'Chicago', category: 'urban', favorite: false },
-  { id: 16, src: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=1600', thumb: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=600', title: 'Abandoned Cabin', location: 'Wyoming', category: 'discoveries', favorite: false },
+  { id: 16, src: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=1600', thumb: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=600', title: 'Abandoned Cabin', location: 'Wyoming', category: 'unique', favorite: false },
 ];
 
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2000';
@@ -29,7 +29,7 @@ const CATEGORIES = [
   { id: 'landscapes', label: 'Landscapes' },
   { id: 'wildlife', label: 'Wildlife' },
   { id: 'urban', label: 'Urban' },
-  { id: 'discoveries', label: 'Discoveries' },
+  { id: 'unique', label: 'Unique' },
   { id: 'all', label: 'All' },
 ];
 
