@@ -70,8 +70,8 @@ export default function Privacy() {
             <h2 className="text-xl font-medium text-white mb-4">Contact</h2>
             <p>
               For any privacy-related questions or requests, please email:{' '}
-              <a href="mailto:hello@aidendevins.com" className="text-amber-400 hover:text-amber-300 transition">
-                hello@aidendevins.com
+              <a href="mailto:hello@kaitlinandaiden.com" className="text-amber-400 hover:text-amber-300 transition">
+                hello@kaitlinandaiden.com
               </a>
             </p>
           </section>
@@ -88,7 +88,7 @@ export default function Privacy() {
 
       <footer className="border-t border-white/10 mt-16">
         <div className="max-w-4xl mx-auto px-6 py-8 text-center text-white/40 text-sm">
-          &copy; {new Date().getFullYear()} Aiden Devins Photography. All rights reserved.
+          &copy; {new Date().getFullYear()} Kaitlin & Aiden Photography. All rights reserved.
         </div>
       </footer>
     </div>

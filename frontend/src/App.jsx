@@ -4,31 +4,31 @@ import './index.css';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 const PHOTOS = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600', thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600', title: 'Alpine Sunrise', location: 'Swiss Alps', category: 'landscapes' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1600', thumb: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600', title: 'Lion at Dusk', location: 'Serengeti, Tanzania', category: 'wildlife' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600', thumb: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600', title: 'Kyoto Serenity', location: 'Kyoto, Japan', category: 'travel' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600', thumb: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600', title: 'Misty Valley', location: 'Dolomites, Italy', category: 'landscapes' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1600', thumb: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600', title: 'Arctic Fox', location: 'Iceland', category: 'wildlife' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1600', thumb: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600', title: 'Havana Streets', location: 'Havana, Cuba', category: 'travel' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600', thumb: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600', title: 'Mountain Majesty', location: 'Patagonia, Argentina', category: 'landscapes' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=1600', thumb: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600', title: 'Elephant Crossing', location: 'Botswana', category: 'wildlife' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600', thumb: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600', title: 'Roman Colosseum', location: 'Rome, Italy', category: 'travel' },
-  { id: 10, src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600', thumb: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600', title: 'Lakeside Reflection', location: 'New Zealand', category: 'landscapes' },
-  { id: 11, src: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1600', thumb: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600', title: 'Hummingbird', location: 'Costa Rica', category: 'wildlife' },
-  { id: 12, src: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=1600', thumb: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=600', title: 'Marrakech Medina', location: 'Morocco', category: 'travel' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600', thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600', title: 'Alpine Sunrise', location: 'Swiss Alps', category: 'landscapes', favorite: true },
+  { id: 2, src: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1600', thumb: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600', title: 'Lion at Dusk', location: 'Serengeti, Tanzania', category: 'wildlife', favorite: true },
+  { id: 3, src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600', thumb: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600', title: 'Misty Valley', location: 'Dolomites, Italy', category: 'landscapes', favorite: true },
+  { id: 4, src: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1600', thumb: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600', title: 'Arctic Fox', location: 'Iceland', category: 'wildlife', favorite: true },
+  { id: 5, src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600', thumb: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600', title: 'Mountain Majesty', location: 'Patagonia, Argentina', category: 'landscapes', favorite: true },
+  { id: 6, src: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=1600', thumb: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600', title: 'Elephant Crossing', location: 'Botswana', category: 'wildlife', favorite: true },
+  { id: 7, src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600', thumb: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600', title: 'Lakeside Reflection', location: 'New Zealand', category: 'landscapes', favorite: false },
+  { id: 8, src: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1600', thumb: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600', title: 'Hummingbird', location: 'Costa Rica', category: 'wildlife', favorite: false },
+  { id: 9, src: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600', thumb: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600', title: 'Mountain Lake', location: 'Norway', category: 'landscapes', favorite: false },
+  { id: 10, src: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600', thumb: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600', title: 'Desert Arch', location: 'Utah', category: 'landscapes', favorite: false },
+  { id: 11, src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1600', thumb: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600', title: 'Moose at Dawn', location: 'Norway', category: 'wildlife', favorite: false },
+  { id: 12, src: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=1600', thumb: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=600', title: 'Northern Lights', location: 'Norway', category: 'landscapes', favorite: false },
 ];
 
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2000';
 
 const CATEGORIES = [
-  { id: 'all', label: 'All' },
+  { id: 'favorites', label: 'Favorites' },
   { id: 'landscapes', label: 'Landscapes' },
   { id: 'wildlife', label: 'Wildlife' },
-  { id: 'travel', label: 'Travel' },
+  { id: 'all', label: 'All' },
 ];
 
 export default function App() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('favorites');
   const [lightboxPhoto, setLightboxPhoto] = useState(null);
   const [formData, setFormData] = useState({ email: '', message: '' });
   const [formStatus, setFormStatus] = useState({ loading: false, success: false, error: '' });
@@ -65,6 +65,8 @@ export default function App() {
 
   const filteredPhotos = activeCategory === 'all' 
     ? PHOTOS 
+    : activeCategory === 'favorites'
+    ? PHOTOS.filter(p => p.favorite)
     : PHOTOS.filter(p => p.category === activeCategory);
 
   const navigateLightbox = (direction) => {
@@ -112,8 +114,8 @@ export default function App() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black" />
         
         <div className="relative z-10 text-center px-6">
-          <h1 className={`text-5xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 transition-all duration-1000 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Aiden Devins
+          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 transition-all duration-1000 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            Kaitlin & Aiden
           </h1>
           <p className={`text-lg md:text-xl text-white/70 font-light tracking-widest uppercase transition-all duration-1000 delay-500 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Photography
@@ -129,7 +131,7 @@ export default function App() {
               onClick={() => scrollTo(contactRef)}
               className="px-8 py-3 bg-amber-500/90 hover:bg-amber-400 text-black transition-all duration-300 text-sm tracking-widest uppercase font-medium"
             >
-              Get Prints
+              Say Hello
             </button>
           </div>
         </div>
@@ -150,7 +152,7 @@ export default function App() {
         {/* Nav */}
         <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-6">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="/" className="text-lg font-light tracking-wider">AD</a>
+            <a href="/" className="text-lg font-light tracking-wider">K&A</a>
             <div className="hidden md:flex items-center gap-8 text-sm text-white/70">
               <button onClick={() => scrollTo(galleryRef)} className="hover:text-white transition">Gallery</button>
               <button onClick={() => scrollTo(aboutRef)} className="hover:text-white transition">About</button>
@@ -219,31 +221,31 @@ export default function App() {
           <div className="aspect-[3/4] bg-white/5 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
-              alt="Aiden Devins"
+              alt="Kaitlin & Aiden"
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <p className="text-amber-400 text-sm tracking-widest uppercase mb-4">About the Photographer</p>
+            <p className="text-amber-400 text-sm tracking-widest uppercase mb-4">About Us</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
               Capturing the World,<br />One Frame at a Time
             </h2>
             <div className="space-y-4 text-white/70 leading-relaxed">
               <p>
-                I'm Aiden Devins, a landscape and wildlife photographer based in Colorado. 
-                For over a decade, I've traveled to some of the most remote corners of our planet, 
-                driven by a passion to document the raw beauty of nature.
+                We're Kaitlin & Aiden — landscape and wildlife photographers with a shared passion 
+                for exploring wild places. From the fjords of Norway to the national parks of 
+                the American West, we chase light and seek out moments of natural beauty.
               </p>
               <p>
-                My work focuses on the intersection of light, land, and life — from the golden hour 
+                Our work focuses on the intersection of light, land, and life — from golden hour 
                 glow over mountain peaks to intimate wildlife encounters in their natural habitats. 
                 Each image tells a story of patience, persistence, and the profound connection 
                 between photographer and subject.
               </p>
               <p>
-                My photographs have been featured in National Geographic, BBC Wildlife, and various 
-                conservation publications. When I'm not behind the lens, I lead photography 
-                workshops and advocate for wildlife conservation.
+                Whether we're hiking to a remote overlook at dawn or waiting quietly for wildlife 
+                to appear, photography is how we connect with the natural world — and how we 
+                share that connection with others.
               </p>
             </div>
             <button 
@@ -256,48 +258,17 @@ export default function App() {
         </div>
       </section>
 
-      {/* Prints & Licensing Section */}
+      {/* Contact Section */}
       <section ref={contactRef} className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-amber-400 text-sm tracking-widest uppercase mb-4">Prints & Licensing</p>
+          <div className="text-center mb-12">
+            <p className="text-amber-400 text-sm tracking-widest uppercase mb-4">Get in Touch</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
-              Bring Nature Into Your Space
+              Say Hello
             </h2>
             <p className="text-white/50 max-w-xl mx-auto">
-              All images are available as museum-quality fine art prints on archival paper or metal, 
-              as well as for commercial licensing. Fill out the form below to inquire.
+              Questions, collaborations, or just want to connect? We'd love to hear from you.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-white/5 p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-medium mb-2">Fine Art Prints</h3>
-              <p className="text-sm text-white/50">Archival quality prints on Hahnemühle paper or aluminum.</p>
-            </div>
-            <div className="bg-white/5 p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-medium mb-2">Limited Editions</h3>
-              <p className="text-sm text-white/50">Signed and numbered editions with certificate of authenticity.</p>
-            </div>
-            <div className="bg-white/5 p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-medium mb-2">Commercial Licensing</h3>
-              <p className="text-sm text-white/50">Usage rights for editorial, advertising, and corporate projects.</p>
-            </div>
           </div>
 
           {/* Contact Form */}
@@ -356,11 +327,11 @@ export default function App() {
       <footer className="border-t border-white/10 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <p className="text-lg font-light tracking-wider mb-1">Aiden Devins Photography</p>
+            <p className="text-lg font-light tracking-wider mb-1">Kaitlin & Aiden Photography</p>
             <p className="text-sm text-white/40">&copy; {new Date().getFullYear()} All rights reserved.</p>
           </div>
           <div className="flex items-center gap-6 text-sm text-white/50">
-            <a href="mailto:hello@aidendevins.com" className="hover:text-white transition">hello@aidendevins.com</a>
+            <a href="mailto:hello@kaitlinandaiden.com" className="hover:text-white transition">hello@kaitlinandaiden.com</a>
             <span className="text-white/20">|</span>
             <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
           </div>
