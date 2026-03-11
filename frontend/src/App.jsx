@@ -10,12 +10,16 @@ const PHOTOS = [
   { id: 4, src: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1600', thumb: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600', title: 'Arctic Fox', location: 'Iceland', category: 'wildlife', favorite: true },
   { id: 5, src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600', thumb: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600', title: 'Mountain Majesty', location: 'Patagonia, Argentina', category: 'landscapes', favorite: true },
   { id: 6, src: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=1600', thumb: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600', title: 'Elephant Crossing', location: 'Botswana', category: 'wildlife', favorite: true },
-  { id: 7, src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600', thumb: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600', title: 'Lakeside Reflection', location: 'New Zealand', category: 'landscapes', favorite: false },
-  { id: 8, src: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1600', thumb: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600', title: 'Hummingbird', location: 'Costa Rica', category: 'wildlife', favorite: false },
-  { id: 9, src: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600', thumb: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600', title: 'Mountain Lake', location: 'Norway', category: 'landscapes', favorite: false },
-  { id: 10, src: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600', thumb: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600', title: 'Desert Arch', location: 'Utah', category: 'landscapes', favorite: false },
-  { id: 11, src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1600', thumb: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600', title: 'Moose at Dawn', location: 'Norway', category: 'wildlife', favorite: false },
-  { id: 12, src: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=1600', thumb: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=600', title: 'Northern Lights', location: 'Norway', category: 'landscapes', favorite: false },
+  { id: 7, src: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1600', thumb: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600', title: 'City Lights', location: 'New York City', category: 'urban', favorite: true },
+  { id: 8, src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600', thumb: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600', title: 'Lakeside Reflection', location: 'New Zealand', category: 'landscapes', favorite: false },
+  { id: 9, src: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1600', thumb: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600', title: 'Hummingbird', location: 'Costa Rica', category: 'wildlife', favorite: false },
+  { id: 10, src: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600', thumb: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600', title: 'Mountain Lake', location: 'Norway', category: 'landscapes', favorite: false },
+  { id: 11, src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600', thumb: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600', title: 'Street Scene', location: 'Tokyo, Japan', category: 'urban', favorite: false },
+  { id: 12, src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1600', thumb: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600', title: 'Moose at Dawn', location: 'Norway', category: 'wildlife', favorite: false },
+  { id: 13, src: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=1600', thumb: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=600', title: 'Northern Lights', location: 'Norway', category: 'landscapes', favorite: false },
+  { id: 14, src: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1600', thumb: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=600', title: 'Roadside Bloom', location: 'California', category: 'discoveries', favorite: false },
+  { id: 15, src: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600', thumb: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600', title: 'Downtown Dusk', location: 'Chicago', category: 'urban', favorite: false },
+  { id: 16, src: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=1600', thumb: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=600', title: 'Abandoned Cabin', location: 'Wyoming', category: 'discoveries', favorite: false },
 ];
 
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2000';
@@ -24,6 +28,8 @@ const CATEGORIES = [
   { id: 'favorites', label: 'Favorites' },
   { id: 'landscapes', label: 'Landscapes' },
   { id: 'wildlife', label: 'Wildlife' },
+  { id: 'urban', label: 'Urban' },
+  { id: 'discoveries', label: 'Discoveries' },
   { id: 'all', label: 'All' },
 ];
 
