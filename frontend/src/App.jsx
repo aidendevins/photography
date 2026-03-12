@@ -13,6 +13,7 @@ const PHOTOS = [
   { id: 7, src: '/south-kaibab-trail.jpg', thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes', favorite: true },
   { id: 8, src: '/horseshoe-bend.jpg', thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes', favorite: true },
   { id: 9, src: '/canyonlands-full.jpg', thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes', favorite: true },
+  { id: 10, src: '/canyonlands-focus.jpg', thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
