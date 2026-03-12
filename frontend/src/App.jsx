@@ -14,6 +14,7 @@ const PHOTOS = [
   { id: 8, src: '/horseshoe-bend.jpg', thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes', favorite: true },
   { id: 9, src: '/canyonlands-full.jpg', thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes', favorite: true },
   { id: 10, src: '/canyonlands-focus.jpg', thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
+  { id: 11, src: '/elk-tetons.jpg', thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
