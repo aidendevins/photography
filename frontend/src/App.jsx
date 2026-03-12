@@ -11,6 +11,7 @@ const PHOTOS = [
   { id: 5, src: '/white-sands-sunset.jpg', thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes', favorite: true },
   { id: 6, src: '/mesa-arch.jpg', thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
   { id: 7, src: '/south-kaibab-trail.jpg', thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes', favorite: true },
+  { id: 8, src: '/horseshoe-bend.jpg', thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
