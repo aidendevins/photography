@@ -7,22 +7,7 @@ const PHOTOS = [
   { id: 1, src: '/hero.jpg', thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes', favorite: true },
   { id: 2, src: '/norway-pano.jpg', thumb: '/norway-pano.jpg', title: 'Mountain Vista', location: 'Norway', category: 'landscapes', favorite: true },
   { id: 3, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
-  { id: 3, src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600', thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600', title: 'Alpine Sunrise', location: 'Swiss Alps', category: 'landscapes', favorite: true },
-  { id: 2, src: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1600', thumb: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600', title: 'Lion at Dusk', location: 'Serengeti, Tanzania', category: 'wildlife', favorite: true },
-  { id: 3, src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600', thumb: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600', title: 'Misty Valley', location: 'Dolomites, Italy', category: 'landscapes', favorite: true },
-  { id: 4, src: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1600', thumb: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600', title: 'Arctic Fox', location: 'Iceland', category: 'wildlife', favorite: true },
-  { id: 5, src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600', thumb: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600', title: 'Mountain Majesty', location: 'Patagonia, Argentina', category: 'landscapes', favorite: true },
-  { id: 6, src: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=1600', thumb: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600', title: 'Elephant Crossing', location: 'Botswana', category: 'wildlife', favorite: true },
-  { id: 7, src: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1600', thumb: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600', title: 'City Lights', location: 'New York City', category: 'urban', favorite: true },
-  { id: 8, src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600', thumb: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600', title: 'Lakeside Reflection', location: 'New Zealand', category: 'landscapes', favorite: false },
-  { id: 9, src: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1600', thumb: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600', title: 'Hummingbird', location: 'Costa Rica', category: 'wildlife', favorite: false },
-  { id: 10, src: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600', thumb: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600', title: 'Mountain Lake', location: 'Norway', category: 'landscapes', favorite: false },
-  { id: 11, src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600', thumb: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600', title: 'Street Scene', location: 'Tokyo, Japan', category: 'urban', favorite: false },
-  { id: 12, src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1600', thumb: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600', title: 'Moose at Dawn', location: 'Norway', category: 'wildlife', favorite: false },
-  { id: 13, src: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=1600', thumb: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?w=600', title: 'Northern Lights', location: 'Norway', category: 'landscapes', favorite: false },
-  { id: 14, src: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1600', thumb: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=600', title: 'Roadside Bloom', location: 'California', category: 'unique', favorite: false },
-  { id: 15, src: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600', thumb: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600', title: 'Downtown Dusk', location: 'Chicago', category: 'urban', favorite: false },
-  { id: 16, src: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=1600', thumb: 'https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=600', title: 'Abandoned Cabin', location: 'Wyoming', category: 'unique', favorite: false },
+  { id: 4, src: '/arches-eye.jpg', thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
@@ -117,8 +102,7 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className={`absolute inset-0 bg-cover transition-opacity duration-1000 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}
-          style={{ backgroundPosition: '40% center' }}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black" />
