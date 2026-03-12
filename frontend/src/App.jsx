@@ -15,6 +15,8 @@ const PHOTOS = [
   { id: 9, src: '/canyonlands-full.jpg', thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes', favorite: true },
   { id: 10, src: '/canyonlands-focus.jpg', thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
   { id: 11, src: '/elk-tetons.jpg', thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife', favorite: true },
+  { id: 12, src: '/south-rim-lookout.jpg', thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique', favorite: true },
+  { id: 13, src: '/desert-tower.jpg', thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
