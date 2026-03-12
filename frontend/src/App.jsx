@@ -5,9 +5,10 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 const PHOTOS = [
   { id: 1, src: '/hero.jpg', thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes', favorite: true },
-  { id: 2, src: '/norway-pano.jpg', thumb: '/norway-pano.jpg', title: 'Mountain Vista', location: 'Norway', category: 'landscapes', favorite: true },
+  { id: 2, src: '/norway-pano.jpg', thumb: '/norway-pano.jpg', title: 'Crater Lake', location: 'Crater Lake National Park, Oregon', category: 'landscapes', favorite: true },
   { id: 3, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
   { id: 4, src: '/arches-eye.jpg', thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique', favorite: true },
+  { id: 5, src: '/white-sands-sunset.jpg', thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
