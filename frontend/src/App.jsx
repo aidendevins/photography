@@ -9,6 +9,7 @@ const PHOTOS = [
   { id: 3, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
   { id: 4, src: '/arches-eye.jpg', thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique', favorite: true },
   { id: 5, src: '/white-sands-sunset.jpg', thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes', favorite: true },
+  { id: 6, src: '/mesa-arch.jpg', thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
