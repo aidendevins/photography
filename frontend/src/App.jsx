@@ -4,8 +4,9 @@ import './index.css';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 const PHOTOS = [
-  { id: 1, src: '/hero.jpg', thumb: '/hero.jpg', title: 'Mountain Vista', location: 'Norway', category: 'landscapes', favorite: true },
-  { id: 2, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
+  { id: 1, src: '/hero.jpg', thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes', favorite: true },
+  { id: 2, src: '/norway-pano.jpg', thumb: '/norway-pano.jpg', title: 'Mountain Vista', location: 'Norway', category: 'landscapes', favorite: true },
+  { id: 3, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
   { id: 3, src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600', thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600', title: 'Alpine Sunrise', location: 'Swiss Alps', category: 'landscapes', favorite: true },
   { id: 2, src: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1600', thumb: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600', title: 'Lion at Dusk', location: 'Serengeti, Tanzania', category: 'wildlife', favorite: true },
   { id: 3, src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600', thumb: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600', title: 'Misty Valley', location: 'Dolomites, Italy', category: 'landscapes', favorite: true },
