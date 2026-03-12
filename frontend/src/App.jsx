@@ -18,6 +18,7 @@ const PHOTOS = [
   { id: 12, src: '/south-rim-lookout.jpg', thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique', favorite: true },
   { id: 13, src: '/desert-tower.jpg', thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique', favorite: true },
   { id: 14, src: '/svolvaer.jpg', thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
+  { id: 15, src: '/half-dome.jpg', thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
