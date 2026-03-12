@@ -17,6 +17,7 @@ const PHOTOS = [
   { id: 11, src: '/elk-tetons.jpg', thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife', favorite: true },
   { id: 12, src: '/south-rim-lookout.jpg', thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique', favorite: true },
   { id: 13, src: '/desert-tower.jpg', thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique', favorite: true },
+  { id: 14, src: '/svolvaer.jpg', thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
