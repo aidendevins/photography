@@ -117,7 +117,8 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-cover transition-opacity duration-1000 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}
+          style={{ backgroundPosition: '40% center' }}
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black" />
