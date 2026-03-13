@@ -20,7 +20,7 @@ const PHOTOS = [
   { id: 14, src: '/svolvaer.jpg', thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
   { id: 15, src: '/half-dome.jpg', thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes', favorite: true },
   { id: 16, src: '/yosemite-falls.jpg', thumb: '/yosemite-falls.jpg', title: 'Yosemite Falls', location: 'Yosemite National Park, California', category: 'landscapes', favorite: true },
-  { id: 17, src: '/pencil-botanical.jpg', thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Denver, Colorado', category: 'urban', favorite: true },
+  { id: 17, src: '/pencil-botanical.jpg', thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban', favorite: true },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
