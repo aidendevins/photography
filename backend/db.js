@@ -35,6 +35,16 @@ async function initDB() {
       photo_id INTEGER PRIMARY KEY,
       created_at TIMESTAMPTZ DEFAULT NOW()
     )`);
+    await client.query(`CREATE TABLE IF NOT EXISTS author_visibility (
+      author VARCHAR(100) PRIMARY KEY,
+      visible BOOLEAN DEFAULT true,
+      updated_at TIMESTAMPTZ DEFAULT NOW()
+    )`);
+    await client.query(`
+      INSERT INTO author_visibility (author, visible)
+      VALUES ('Kaitlin & Aiden', true)
+      ON CONFLICT (author) DO NOTHING
+    `);
     console.log('✅ Database tables initialized');
   } catch (err) {
     console.error('Database init error:', err);

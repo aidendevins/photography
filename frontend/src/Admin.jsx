@@ -20,24 +20,24 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 const ADMIN_PASSWORD = '0612';
 
 const ALL_PHOTOS = [
-  { id: 1, thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes' },
-  { id: 2, thumb: '/norway-pano.jpg', title: 'Crater Lake', location: 'Crater Lake National Park, Oregon', category: 'landscapes' },
-  { id: 3, thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes' },
-  { id: 4, thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique' },
-  { id: 5, thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes' },
-  { id: 6, thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique' },
-  { id: 7, thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes' },
-  { id: 8, thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes' },
-  { id: 9, thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes' },
-  { id: 10, thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique' },
-  { id: 11, thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife' },
-  { id: 12, thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique' },
-  { id: 13, thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique' },
-  { id: 14, thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes' },
-  { id: 15, thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes' },
-  { id: 16, thumb: '/yosemite-falls.jpg', title: 'Yosemite Falls', location: 'Yosemite National Park, California', category: 'landscapes' },
-  { id: 17, thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban' },
-  { id: 18, thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique' },
+  { id: 1, thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 2, thumb: '/norway-pano.jpg', title: 'Crater Lake', location: 'Crater Lake National Park, Oregon', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 3, thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 4, thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 5, thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 6, thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 7, thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 8, thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 9, thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 10, thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 11, thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife', author: 'Kaitlin & Aiden' },
+  { id: 12, thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 13, thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 14, thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 15, thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 16, thumb: '/yosemite-falls.jpg', title: 'Yosemite Falls', location: 'Yosemite National Park, California', category: 'landscapes', author: 'Kaitlin & Aiden' },
+  { id: 17, thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban', author: 'Kaitlin & Aiden' },
+  { id: 18, thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique', author: 'Kaitlin & Aiden' },
 ];
 
 const CHART_COLORS = ['#f59e0b', '#06b6d4', '#8b5cf6', '#10b981', '#f43f5e', '#6366f1'];
@@ -137,6 +137,13 @@ export default function Admin() {
   const [locationFilter, setLocationFilter] = useState('');
   const [blockedIps, setBlockedIps] = useState([]);
   const [favoriteIds, setFavoriteIds] = useState(new Set());
+  const [authorVisibility, setAuthorVisibility] = useState({});
+
+  const knownAuthors = useMemo(() => {
+    const seen = new Set(ALL_PHOTOS.map(p => p.author));
+    Object.keys(authorVisibility).forEach(a => seen.add(a));
+    return [...seen].sort();
+  }, [authorVisibility]);
 
   const blockedIpSet = useMemo(() => new Set(blockedIps.map(b => b.ip)), [blockedIps]);
 
@@ -183,8 +190,9 @@ export default function Admin() {
       fetch(`${API_URL}/admin/contacts`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/admin/blocked-ips`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/favorites`),
+      fetch(`${API_URL}/author-visibility`),
     ])
-      .then(async ([analyticsRes, contactsRes, blockedRes, favRes]) => {
+      .then(async ([analyticsRes, contactsRes, blockedRes, favRes, authorRes]) => {
         if (analyticsRes.status === 401) {
           sessionStorage.removeItem('adminAuth');
           setAuthenticated(false);
@@ -194,11 +202,15 @@ export default function Admin() {
         const contactsData = await contactsRes.json();
         const blockedData = await blockedRes.json();
         const favData = await favRes.json();
+        const authorData = await authorRes.json();
         setPageViews(analyticsData.pageViews || []);
         setEvents(analyticsData.events || []);
         setContacts(contactsData.contacts || []);
         setBlockedIps(blockedData.blockedIps || []);
         setFavoriteIds(new Set(favData.favorites || []));
+        const av = {};
+        (authorData.authors || []).forEach(a => { av[a.author] = a.visible; });
+        setAuthorVisibility(av);
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
@@ -228,17 +240,22 @@ export default function Admin() {
       fetch(`${API_URL}/admin/contacts`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/admin/blocked-ips`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/favorites`),
+      fetch(`${API_URL}/author-visibility`),
     ])
-      .then(async ([analyticsRes, contactsRes, blockedRes, favRes]) => {
+      .then(async ([analyticsRes, contactsRes, blockedRes, favRes, authorRes]) => {
         const analyticsData = await analyticsRes.json();
         const contactsData = await contactsRes.json();
         const blockedData = await blockedRes.json();
         const favData = await favRes.json();
+        const authorData = await authorRes.json();
         setPageViews(analyticsData.pageViews || []);
         setEvents(analyticsData.events || []);
         setContacts(contactsData.contacts || []);
         setBlockedIps(blockedData.blockedIps || []);
         setFavoriteIds(new Set(favData.favorites || []));
+        const av = {};
+        (authorData.authors || []).forEach(a => { av[a.author] = a.visible; });
+        setAuthorVisibility(av);
       })
       .finally(() => setLoading(false));
   };
@@ -357,6 +374,12 @@ export default function Admin() {
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${activeTab === 'photos' ? 'bg-amber-500 text-slate-900' : 'text-slate-400 hover:text-white hover:bg-slate-700'}`}
             >
               Photos
+            </button>
+            <button
+              onClick={() => setActiveTab('authors')}
+              className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${activeTab === 'authors' ? 'bg-amber-500 text-slate-900' : 'text-slate-400 hover:text-white hover:bg-slate-700'}`}
+            >
+              Authors
             </button>
           </div>
         </div>
@@ -792,6 +815,80 @@ export default function Admin() {
           )}
         </div>
         </div>
+        )}
+
+        {activeTab === 'authors' && (
+          <div>
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-white">Author Visibility</h2>
+              <p className="text-slate-400 text-sm mt-1">Toggle an author off to hide all of their photos from the public site.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {knownAuthors.map((author) => {
+                const isVisible = authorVisibility[author] !== false;
+                const photoCount = ALL_PHOTOS.filter(p => p.author === author).length;
+                return (
+                  <div
+                    key={author}
+                    className={`bg-slate-800/80 rounded-xl border p-5 flex items-center justify-between gap-4 transition ${isVisible ? 'border-slate-700/50' : 'border-slate-700/30 opacity-60'}`}
+                  >
+                    <div>
+                      <p className="text-white font-semibold">{author}</p>
+                      <p className="text-slate-400 text-xs mt-0.5">{photoCount} photo{photoCount !== 1 ? 's' : ''}</p>
+                      <p className={`text-xs font-medium mt-1 ${isVisible ? 'text-emerald-400' : 'text-slate-500'}`}>
+                        {isVisible ? 'Visible on site' : 'Hidden from site'}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const newVisible = !isVisible;
+                        fetch(`${API_URL}/admin/author-visibility`, {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json', Authorization: 'Bearer 0612' },
+                          body: JSON.stringify({ author, visible: newVisible }),
+                        })
+                          .then(r => r.json())
+                          .then(data => {
+                            if (data.ok) {
+                              setAuthorVisibility(prev => ({ ...prev, [author]: newVisible }));
+                            }
+                          })
+                          .catch(() => {});
+                      }}
+                      className={`relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${isVisible ? 'bg-amber-500' : 'bg-slate-600'}`}
+                      role="switch"
+                      aria-checked={isVisible}
+                      title={isVisible ? 'Hide this author' : 'Show this author'}
+                    >
+                      <span
+                        className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${isVisible ? 'translate-x-5' : 'translate-x-0'}`}
+                      />
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-8 bg-slate-800/40 rounded-xl border border-slate-700/30 p-5">
+              <h3 className="text-sm font-semibold text-slate-300 mb-3">Photos by Author</h3>
+              <div className="space-y-2">
+                {knownAuthors.map(author => {
+                  const photos = ALL_PHOTOS.filter(p => p.author === author);
+                  const isVisible = authorVisibility[author] !== false;
+                  return (
+                    <div key={author} className="flex items-center gap-3">
+                      <span className={`w-2 h-2 rounded-full flex-shrink-0 ${isVisible ? 'bg-emerald-400' : 'bg-slate-600'}`} />
+                      <span className="text-slate-300 text-sm font-medium w-40 truncate">{author}</span>
+                      <div className="flex flex-wrap gap-1">
+                        {photos.map(p => (
+                          <span key={p.id} className="text-xs bg-slate-700/60 text-slate-400 px-2 py-0.5 rounded capitalize">{p.title}</span>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         )}
 
         {activeTab === 'photos' && (

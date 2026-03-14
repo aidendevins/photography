@@ -115,6 +115,27 @@ router.delete('/admin/blocked-ips/:ip', async (req, res) => {
   } catch (err) { res.status(500).json({ error: 'Failed' }); }
 });
 
+router.get('/author-visibility', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT author, visible FROM author_visibility ORDER BY author');
+    res.json({ authors: result.rows });
+  } catch (err) { res.status(500).json({ error: 'Failed' }); }
+});
+
+router.post('/admin/author-visibility', async (req, res) => {
+  if (!auth(req, res)) return;
+  const { author, visible } = req.body;
+  if (!author || typeof visible !== 'boolean') return res.status(400).json({ error: 'Invalid' });
+  try {
+    await pool.query(`
+      INSERT INTO author_visibility (author, visible, updated_at)
+      VALUES ($1, $2, NOW())
+      ON CONFLICT (author) DO UPDATE SET visible = $2, updated_at = NOW()
+    `, [author, visible]);
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: 'Failed' }); }
+});
+
 router.get('/favorites', async (req, res) => {
   try {
     const result = await pool.query('SELECT photo_id FROM photo_favorites');
