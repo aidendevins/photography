@@ -29,6 +29,7 @@ const ALL_PHOTOS = [
   { id: 23, src: '/rainier-falls.jpg', thumb: '/rainier-falls.jpg', title: 'Rainier Falls', location: 'Mount Rainier National Park, Washington', category: 'unique', author: 'Aiden' },
   { id: 24, src: '/delicate-arch.jpg', thumb: '/delicate-arch.jpg', title: 'Delicate Arch', location: 'Arches National Park, Utah', category: 'unique', author: 'Kaitlin & Aiden' },
   { id: 25, src: '/hallgrimskirkja.jpg', thumb: '/hallgrimskirkja.jpg', title: 'Hallgrímskirkja', location: 'Reykjavik, Iceland', category: 'urban', author: 'Kaitlin & Aiden' },
+  { id: 26, src: '/olympic-shoreline.jpg', thumb: '/olympic-shoreline.jpg', title: 'Olympic Shoreline', location: 'Olympic National Park, Washington', category: 'landscapes', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
