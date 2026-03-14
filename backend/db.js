@@ -42,7 +42,7 @@ async function initDB() {
     )`);
     await client.query(`
       INSERT INTO author_visibility (author, visible)
-      VALUES ('Kaitlin & Aiden', true)
+      VALUES ('Kaitlin & Aiden', true), ('Aiden', true), ('Kaitlin', true)
       ON CONFLICT (author) DO NOTHING
     `);
     console.log('✅ Database tables initialized');

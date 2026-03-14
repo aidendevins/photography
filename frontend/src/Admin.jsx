@@ -40,6 +40,7 @@ const ALL_PHOTOS = [
   { id: 18, thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique', author: 'Kaitlin & Aiden' },
   { id: 19, thumb: '/loen-hike.jpg', title: 'Loen Hike', location: 'Loen, Norway', category: 'unique', author: 'Kaitlin & Aiden' },
   { id: 20, thumb: '/reine-homes.jpg', title: 'Reine Homes', location: 'Reine, Lofoten, Norway', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 21, thumb: '/goat-rainier.jpg', title: 'Goat Rainier', location: 'Mount Rainier National Park, Washington', category: 'wildlife', author: 'Aiden' },
 ];
 
 const CHART_COLORS = ['#f59e0b', '#06b6d4', '#8b5cf6', '#10b981', '#f43f5e', '#6366f1'];
