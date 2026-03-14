@@ -19,6 +19,27 @@ import './index.css';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 const ADMIN_PASSWORD = '0612';
 
+const ALL_PHOTOS = [
+  { id: 1, thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes' },
+  { id: 2, thumb: '/norway-pano.jpg', title: 'Crater Lake', location: 'Crater Lake National Park, Oregon', category: 'landscapes' },
+  { id: 3, thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes' },
+  { id: 4, thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique' },
+  { id: 5, thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes' },
+  { id: 6, thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique' },
+  { id: 7, thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes' },
+  { id: 8, thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes' },
+  { id: 9, thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes' },
+  { id: 10, thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique' },
+  { id: 11, thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife' },
+  { id: 12, thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique' },
+  { id: 13, thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique' },
+  { id: 14, thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes' },
+  { id: 15, thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes' },
+  { id: 16, thumb: '/yosemite-falls.jpg', title: 'Yosemite Falls', location: 'Yosemite National Park, California', category: 'landscapes' },
+  { id: 17, thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban' },
+  { id: 18, thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique' },
+];
+
 const CHART_COLORS = ['#f59e0b', '#06b6d4', '#8b5cf6', '#10b981', '#f43f5e', '#6366f1'];
 
 // Filter out internal/proxy IPs (Railway CGNAT, localhost, private ranges)
@@ -115,6 +136,7 @@ export default function Admin() {
   const [activeTab, setActiveTab] = useState('analytics');
   const [locationFilter, setLocationFilter] = useState('');
   const [blockedIps, setBlockedIps] = useState([]);
+  const [favoriteIds, setFavoriteIds] = useState(new Set());
 
   const blockedIpSet = useMemo(() => new Set(blockedIps.map(b => b.ip)), [blockedIps]);
 
@@ -160,8 +182,9 @@ export default function Admin() {
       fetch(`${API_URL}/admin/analytics`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/admin/contacts`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/admin/blocked-ips`, { headers: { Authorization: 'Bearer 0612' } }),
+      fetch(`${API_URL}/favorites`),
     ])
-      .then(async ([analyticsRes, contactsRes, blockedRes]) => {
+      .then(async ([analyticsRes, contactsRes, blockedRes, favRes]) => {
         if (analyticsRes.status === 401) {
           sessionStorage.removeItem('adminAuth');
           setAuthenticated(false);
@@ -170,10 +193,12 @@ export default function Admin() {
         const analyticsData = await analyticsRes.json();
         const contactsData = await contactsRes.json();
         const blockedData = await blockedRes.json();
+        const favData = await favRes.json();
         setPageViews(analyticsData.pageViews || []);
         setEvents(analyticsData.events || []);
         setContacts(contactsData.contacts || []);
         setBlockedIps(blockedData.blockedIps || []);
+        setFavoriteIds(new Set(favData.favorites || []));
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
@@ -202,17 +227,35 @@ export default function Admin() {
       fetch(`${API_URL}/admin/analytics`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/admin/contacts`, { headers: { Authorization: 'Bearer 0612' } }),
       fetch(`${API_URL}/admin/blocked-ips`, { headers: { Authorization: 'Bearer 0612' } }),
+      fetch(`${API_URL}/favorites`),
     ])
-      .then(async ([analyticsRes, contactsRes, blockedRes]) => {
+      .then(async ([analyticsRes, contactsRes, blockedRes, favRes]) => {
         const analyticsData = await analyticsRes.json();
         const contactsData = await contactsRes.json();
         const blockedData = await blockedRes.json();
+        const favData = await favRes.json();
         setPageViews(analyticsData.pageViews || []);
         setEvents(analyticsData.events || []);
         setContacts(contactsData.contacts || []);
         setBlockedIps(blockedData.blockedIps || []);
+        setFavoriteIds(new Set(favData.favorites || []));
       })
       .finally(() => setLoading(false));
+  };
+
+  const toggleFavorite = (photoId) => {
+    const isFav = favoriteIds.has(photoId);
+    const method = isFav ? 'DELETE' : 'POST';
+    fetch(`${API_URL}/admin/favorites/${photoId}`, {
+      method,
+      headers: { Authorization: 'Bearer 0612' },
+    }).then(() => {
+      setFavoriteIds(prev => {
+        const next = new Set(prev);
+        isFav ? next.delete(photoId) : next.add(photoId);
+        return next;
+      });
+    });
   };
 
   if (!authenticated) {
@@ -308,6 +351,12 @@ export default function Admin() {
                   {contacts.length}
                 </span>
               )}
+            </button>
+            <button
+              onClick={() => setActiveTab('photos')}
+              className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${activeTab === 'photos' ? 'bg-amber-500 text-slate-900' : 'text-slate-400 hover:text-white hover:bg-slate-700'}`}
+            >
+              Photos
             </button>
           </div>
         </div>
@@ -743,6 +792,55 @@ export default function Admin() {
           )}
         </div>
         </div>
+        )}
+
+        {activeTab === 'photos' && (
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h2 className="text-xl font-semibold text-white">Manage Favorites</h2>
+                <p className="text-slate-400 text-sm mt-1">Click the star to add or remove a photo from the Favorites category.</p>
+              </div>
+              <div className="bg-slate-800/80 rounded-xl border border-slate-700/50 px-4 py-2 text-center">
+                <p className="text-2xl font-bold text-amber-400">{favoriteIds.size}</p>
+                <p className="text-xs text-slate-400">Favorites</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {ALL_PHOTOS.map((photo) => {
+                const isFav = favoriteIds.has(photo.id);
+                return (
+                  <div key={photo.id} className="relative group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/50">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={photo.thumb}
+                        alt={photo.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-3">
+                      <p className="text-sm font-medium text-white truncate">{photo.title}</p>
+                      <p className="text-xs text-slate-400 truncate">{photo.location}</p>
+                      <p className="text-xs text-slate-500 mt-0.5 capitalize">{photo.category}</p>
+                    </div>
+                    <button
+                      onClick={() => toggleFavorite(photo.id)}
+                      className={`absolute top-2 right-2 w-9 h-9 rounded-full flex items-center justify-center transition-all shadow-lg ${
+                        isFav
+                          ? 'bg-amber-500 text-slate-900 hover:bg-amber-400'
+                          : 'bg-slate-900/70 text-slate-400 hover:bg-slate-800 hover:text-amber-400'
+                      }`}
+                      title={isFav ? 'Remove from Favorites' : 'Add to Favorites'}
+                    >
+                      <svg className="w-5 h-5" fill={isFav ? 'currentColor' : 'none'} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                      </svg>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         )}
       </main>
     </div>

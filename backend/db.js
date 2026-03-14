@@ -31,6 +31,10 @@ async function initDB() {
       id SERIAL PRIMARY KEY, ip VARCHAR(100) UNIQUE NOT NULL,
       note VARCHAR(255), created_at TIMESTAMPTZ DEFAULT NOW()
     )`);
+    await client.query(`CREATE TABLE IF NOT EXISTS photo_favorites (
+      photo_id INTEGER PRIMARY KEY,
+      created_at TIMESTAMPTZ DEFAULT NOW()
+    )`);
     console.log('✅ Database tables initialized');
   } catch (err) {
     console.error('Database init error:', err);

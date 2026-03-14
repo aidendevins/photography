@@ -115,6 +115,29 @@ router.delete('/admin/blocked-ips/:ip', async (req, res) => {
   } catch (err) { res.status(500).json({ error: 'Failed' }); }
 });
 
+router.get('/favorites', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT photo_id FROM photo_favorites');
+    res.json({ favorites: result.rows.map(r => r.photo_id) });
+  } catch (err) { res.status(500).json({ error: 'Failed' }); }
+});
+
+router.post('/admin/favorites/:id', async (req, res) => {
+  if (!auth(req, res)) return;
+  try {
+    await pool.query('INSERT INTO photo_favorites (photo_id) VALUES ($1) ON CONFLICT DO NOTHING', [req.params.id]);
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: 'Failed' }); }
+});
+
+router.delete('/admin/favorites/:id', async (req, res) => {
+  if (!auth(req, res)) return;
+  try {
+    await pool.query('DELETE FROM photo_favorites WHERE photo_id=$1', [req.params.id]);
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: 'Failed' }); }
+});
+
 router.delete('/admin/analytics/test-data', async (req, res) => {
   if (!auth(req, res)) return;
   const patterns = ['::1','127.%','10.%','192.168.%','::ffff:127.%','::ffff:10.%','::ffff:192.168.%','::ffff:100.6%','::ffff:100.7%','::ffff:100.8%','::ffff:100.9%','::ffff:100.10%','::ffff:100.11%','::ffff:100.12%','100.6%','100.7%','100.8%','100.9%','100.10%','100.11%','100.12%'];

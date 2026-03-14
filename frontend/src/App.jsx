@@ -3,25 +3,25 @@ import './index.css';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
-const PHOTOS = [
-  { id: 1, src: '/hero.jpg', thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes', favorite: true },
-  { id: 2, src: '/norway-pano.jpg', thumb: '/norway-pano.jpg', title: 'Crater Lake', location: 'Crater Lake National Park, Oregon', category: 'landscapes', favorite: true },
-  { id: 3, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
-  { id: 4, src: '/arches-eye.jpg', thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique', favorite: true },
-  { id: 5, src: '/white-sands-sunset.jpg', thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes', favorite: true },
-  { id: 6, src: '/mesa-arch.jpg', thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
-  { id: 7, src: '/south-kaibab-trail.jpg', thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes', favorite: true },
-  { id: 8, src: '/horseshoe-bend.jpg', thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes', favorite: true },
-  { id: 9, src: '/canyonlands-full.jpg', thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes', favorite: true },
-  { id: 10, src: '/canyonlands-focus.jpg', thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique', favorite: true },
-  { id: 11, src: '/elk-tetons.jpg', thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife', favorite: true },
-  { id: 12, src: '/south-rim-lookout.jpg', thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique', favorite: true },
-  { id: 13, src: '/desert-tower.jpg', thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique', favorite: true },
-  { id: 14, src: '/svolvaer.jpg', thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes', favorite: true },
-  { id: 15, src: '/half-dome.jpg', thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes', favorite: true },
-  { id: 16, src: '/yosemite-falls.jpg', thumb: '/yosemite-falls.jpg', title: 'Yosemite Falls', location: 'Yosemite National Park, California', category: 'landscapes', favorite: true },
-  { id: 17, src: '/pencil-botanical.jpg', thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban', favorite: true },
-  { id: 18, src: '/golden-joshua.jpg', thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique', favorite: true },
+const ALL_PHOTOS = [
+  { id: 1, src: '/hero.jpg', thumb: '/hero.jpg', title: 'Joshua Tree Sunset', location: 'Joshua Tree, California', category: 'landscapes' },
+  { id: 2, src: '/norway-pano.jpg', thumb: '/norway-pano.jpg', title: 'Crater Lake', location: 'Crater Lake National Park, Oregon', category: 'landscapes' },
+  { id: 3, src: '/reine.jpg', thumb: '/reine.jpg', title: 'Reine', location: 'Lofoten, Norway', category: 'landscapes' },
+  { id: 4, src: '/arches-eye.jpg', thumb: '/arches-eye.jpg', title: 'Arches Eye', location: 'Arches National Park, Utah', category: 'unique' },
+  { id: 5, src: '/white-sands-sunset.jpg', thumb: '/white-sands-sunset.jpg', title: 'White Sands Sunset', location: 'White Sands National Park, New Mexico', category: 'landscapes' },
+  { id: 6, src: '/mesa-arch.jpg', thumb: '/mesa-arch.jpg', title: 'Mesa Arch', location: 'Canyonlands National Park, Utah', category: 'unique' },
+  { id: 7, src: '/south-kaibab-trail.jpg', thumb: '/south-kaibab-trail.jpg', title: 'South Kaibab Trail', location: 'Grand Canyon National Park, Arizona', category: 'landscapes' },
+  { id: 8, src: '/horseshoe-bend.jpg', thumb: '/horseshoe-bend.jpg', title: 'Horseshoe Bend', location: 'Page, Arizona', category: 'landscapes' },
+  { id: 9, src: '/canyonlands-full.jpg', thumb: '/canyonlands-full.jpg', title: 'Canyonlands Full', location: 'Canyonlands National Park, Utah', category: 'landscapes' },
+  { id: 10, src: '/canyonlands-focus.jpg', thumb: '/canyonlands-focus.jpg', title: 'Canyonlands Focus', location: 'Canyonlands National Park, Utah', category: 'unique' },
+  { id: 11, src: '/elk-tetons.jpg', thumb: '/elk-tetons.jpg', title: 'Elk Tetons', location: 'Grand Teton National Park, Wyoming', category: 'wildlife' },
+  { id: 12, src: '/south-rim-lookout.jpg', thumb: '/south-rim-lookout.jpg', title: 'South Rim Lookout', location: 'Grand Canyon National Park, Arizona', category: 'unique' },
+  { id: 13, src: '/desert-tower.jpg', thumb: '/desert-tower.jpg', title: 'Desert Tower', location: 'Utah', category: 'unique' },
+  { id: 14, src: '/svolvaer.jpg', thumb: '/svolvaer.jpg', title: 'Svolvaer', location: 'Lofoten, Norway', category: 'landscapes' },
+  { id: 15, src: '/half-dome.jpg', thumb: '/half-dome.jpg', title: 'Half Dome', location: 'Yosemite National Park, California', category: 'landscapes' },
+  { id: 16, src: '/yosemite-falls.jpg', thumb: '/yosemite-falls.jpg', title: 'Yosemite Falls', location: 'Yosemite National Park, California', category: 'landscapes' },
+  { id: 17, src: '/pencil-botanical.jpg', thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban' },
+  { id: 18, src: '/golden-joshua.jpg', thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
@@ -41,6 +41,9 @@ export default function App() {
   const [formData, setFormData] = useState({ email: '', message: '' });
   const [formStatus, setFormStatus] = useState({ loading: false, success: false, error: '' });
   const [heroLoaded, setHeroLoaded] = useState(false);
+  const [favoriteIds, setFavoriteIds] = useState(new Set(ALL_PHOTOS.map(p => p.id)));
+
+  const PHOTOS = ALL_PHOTOS.map(p => ({ ...p, favorite: favoriteIds.has(p.id) }));
   
   const galleryRef = useRef(null);
   const aboutRef = useRef(null);
@@ -52,6 +55,17 @@ export default function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ path: window.location.pathname, referrer: document.referrer }),
     }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    fetch(`${API_URL}/favorites`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.favorites && data.favorites.length > 0) {
+          setFavoriteIds(new Set(data.favorites));
+        }
+      })
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
