@@ -257,9 +257,9 @@ export default function App() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="aspect-[3/4] bg-white/5 overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
+              src="/about.jpg"
               alt="Waypoint Journals"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
           </div>
           <div>
