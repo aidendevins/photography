@@ -27,6 +27,8 @@ const ALL_PHOTOS = [
   { id: 21, src: '/goat-rainier.jpg', thumb: '/goat-rainier.jpg', title: 'Goat Rainier', location: 'Mount Rainier National Park, Washington', category: 'wildlife', author: 'Aiden' },
   { id: 22, src: '/rainier-peak.jpg', thumb: '/rainier-peak.jpg', title: 'Rainier Peak', location: 'Mount Rainier National Park, Washington', category: 'landscapes', author: 'Aiden' },
   { id: 23, src: '/rainier-falls.jpg', thumb: '/rainier-falls.jpg', title: 'Rainier Falls', location: 'Mount Rainier National Park, Washington', category: 'unique', author: 'Aiden' },
+  { id: 24, src: '/delicate-arch.jpg', thumb: '/delicate-arch.jpg', title: 'Delicate Arch', location: 'Arches National Park, Utah', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 25, src: '/hallgrimskirkja.jpg', thumb: '/hallgrimskirkja.jpg', title: 'Hallgrímskirkja', location: 'Reykjavik, Iceland', category: 'urban', author: 'Kaitlin & Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
