@@ -26,6 +26,7 @@ const ALL_PHOTOS = [
   { id: 20, src: '/reine-homes.jpg', thumb: '/reine-homes.jpg', title: 'Reine Homes', location: 'Reine, Lofoten, Norway', category: 'unique', author: 'Kaitlin & Aiden' },
   { id: 21, src: '/goat-rainier.jpg', thumb: '/goat-rainier.jpg', title: 'Goat Rainier', location: 'Mount Rainier National Park, Washington', category: 'wildlife', author: 'Aiden' },
   { id: 22, src: '/rainier-peak.jpg', thumb: '/rainier-peak.jpg', title: 'Rainier Peak', location: 'Mount Rainier National Park, Washington', category: 'landscapes', author: 'Aiden' },
+  { id: 23, src: '/rainier-falls.jpg', thumb: '/rainier-falls.jpg', title: 'Rainier Falls', location: 'Mount Rainier National Park, Washington', category: 'unique', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
