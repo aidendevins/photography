@@ -52,6 +52,7 @@ const ALL_PHOTOS = [
   { id: 30, thumb: '/lewis-lake-v1.jpg', title: 'Lewis Lake', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
   { id: 31, thumb: '/lewis-lake-v2.jpg', title: 'Lewis Lake II', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
   { id: 32, thumb: '/lewis-lake-v3.jpg', title: 'Lewis Lake III', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
+  { id: 33, thumb: '/wing-lake-sunset.jpg', title: 'Wing Lake Sunset', location: 'Alpine Lakes Wilderness, Washington', category: 'landscapes', author: 'Aiden' },
 ];
 
 const CHART_COLORS = ['#f59e0b', '#06b6d4', '#8b5cf6', '#10b981', '#f43f5e', '#6366f1'];
