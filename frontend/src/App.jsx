@@ -30,6 +30,9 @@ const ALL_PHOTOS = [
   { id: 24, src: '/delicate-arch.jpg', thumb: '/delicate-arch.jpg', title: 'Delicate Arch', location: 'Arches National Park, Utah', category: 'unique', author: 'Kaitlin & Aiden' },
   { id: 25, src: '/hallgrimskirkja.jpg', thumb: '/hallgrimskirkja.jpg', title: 'Hallgrímskirkja', location: 'Reykjavik, Iceland', category: 'urban', author: 'Kaitlin & Aiden' },
   { id: 26, src: '/olympic-shoreline.jpg', thumb: '/olympic-shoreline.jpg', title: 'Olympic Shoreline', location: 'Olympic National Park, Washington', category: 'landscapes', author: 'Aiden' },
+  { id: 27, src: '/wing-lake.jpg', thumb: '/wing-lake.jpg', title: 'Wing Lake', location: 'Alpine Lakes Wilderness, Washington', category: 'unique', author: 'Aiden' },
+  { id: 28, src: '/blackpeak-sunrise.jpg', thumb: '/blackpeak-sunrise.jpg', title: 'Black Peak Sunrise', location: 'North Cascades, Washington', category: 'unique', author: 'Aiden' },
+  { id: 29, src: '/hoh-rainforest.jpg', thumb: '/hoh-rainforest.jpg', title: 'Hoh Rainforest', location: 'Olympic National Park, Washington', category: 'unique', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
