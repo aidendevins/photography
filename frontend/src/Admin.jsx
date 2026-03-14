@@ -49,6 +49,9 @@ const ALL_PHOTOS = [
   { id: 27, thumb: '/wing-lake.jpg', title: 'Wing Lake', location: 'Alpine Lakes Wilderness, Washington', category: 'unique', author: 'Aiden' },
   { id: 28, thumb: '/blackpeak-sunrise.jpg', title: 'Black Peak Sunrise', location: 'North Cascades, Washington', category: 'unique', author: 'Aiden' },
   { id: 29, thumb: '/hoh-rainforest.jpg', title: 'Hoh Rainforest', location: 'Olympic National Park, Washington', category: 'unique', author: 'Aiden' },
+  { id: 30, thumb: '/lewis-lake-v1.jpg', title: 'Lewis Lake', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
+  { id: 31, thumb: '/lewis-lake-v2.jpg', title: 'Lewis Lake II', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
+  { id: 32, thumb: '/lewis-lake-v3.jpg', title: 'Lewis Lake III', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
 ];
 
 const CHART_COLORS = ['#f59e0b', '#06b6d4', '#8b5cf6', '#10b981', '#f43f5e', '#6366f1'];
