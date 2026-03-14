@@ -23,6 +23,7 @@ const ALL_PHOTOS = [
   { id: 17, src: '/pencil-botanical.jpg', thumb: '/pencil-botanical.jpg', title: 'Pencil Botanical', location: 'Atlanta Botanical Garden, Georgia', category: 'urban', author: 'Kaitlin & Aiden' },
   { id: 18, src: '/golden-joshua.jpg', thumb: '/golden-joshua.jpg', title: 'Golden Joshua', location: 'Joshua Tree National Park, California', category: 'unique', author: 'Kaitlin & Aiden' },
   { id: 19, src: '/loen-hike.jpg', thumb: '/loen-hike.jpg', title: 'Loen Hike', location: 'Loen, Norway', category: 'unique', author: 'Kaitlin & Aiden' },
+  { id: 20, src: '/reine-homes.jpg', thumb: '/reine-homes.jpg', title: 'Reine Homes', location: 'Reine, Lofoten, Norway', category: 'unique', author: 'Kaitlin & Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
