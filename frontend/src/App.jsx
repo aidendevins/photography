@@ -40,6 +40,8 @@ const ALL_PHOTOS = [
   { id: 34, src: '/pelicans.jpg', thumb: '/pelicans.jpg', title: 'Pelicans', location: 'Yellowstone National Park, Wyoming', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 35, src: '/bald-eagle.jpg', thumb: '/bald-eagle.jpg', title: 'Bald Eagle', location: 'Washington', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 36, src: '/palermo-sunset.jpg', thumb: '/palermo-sunset.jpg', title: 'Palermo Sunset', location: 'Palermo, Sicily, Italy', category: 'urban', author: 'Aiden' },
+  { id: 37, src: '/santa-teresa.jpg', thumb: '/santa-teresa.jpg', title: 'Santa Teresa', location: 'Santa Teresa, Rio de Janeiro, Brazil', category: 'urban', author: 'Aiden' },
+  { id: 38, src: '/palermo-ba.jpg', thumb: '/palermo-ba.jpg', title: 'Palermo Buenos Aires', location: 'Palermo, Buenos Aires, Argentina', category: 'urban', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
