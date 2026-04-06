@@ -55,7 +55,6 @@ const ALL_PHOTOS = [
   { id: 33, thumb: '/wing-lake-sunset.jpg', title: 'Wing Lake Sunset', location: 'Alpine Lakes Wilderness, Washington', category: 'landscapes', author: 'Aiden' },
   { id: 34, thumb: '/pelicans.jpg', title: 'Pelicans', location: 'Yellowstone National Park, Wyoming', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 35, thumb: '/bald-eagle.jpg', title: 'Bald Eagle', location: 'Washington', category: 'wildlife', author: 'Kaitlin & Aiden' },
-  { id: 36, thumb: '/palermo-sunset.jpg', title: 'Palermo Sunset', location: 'Palermo, Sicily, Italy', category: 'urban', author: 'Aiden' },
   { id: 37, thumb: '/santa-teresa.jpg', title: 'Santa Teresa', location: 'Santa Teresa, Rio de Janeiro, Brazil', category: 'urban', author: 'Aiden' },
   { id: 38, thumb: '/palermo-ba.jpg', title: 'Palermo Buenos Aires', location: 'Palermo, Buenos Aires, Argentina', category: 'urban', author: 'Aiden' },
 ];
