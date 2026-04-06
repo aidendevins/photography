@@ -57,6 +57,7 @@ const ALL_PHOTOS = [
   { id: 35, thumb: '/bald-eagle.jpg', title: 'Bald Eagle', location: 'Washington', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 37, thumb: '/santa-teresa.jpg', title: 'Santa Teresa', location: 'Santa Teresa, Rio de Janeiro, Brazil', category: 'urban', author: 'Aiden' },
   { id: 38, thumb: '/palermo-ba.jpg', title: 'Palermo Buenos Aires', location: 'Palermo, Buenos Aires, Argentina', category: 'urban', author: 'Aiden' },
+  { id: 39, thumb: '/toco-toucan.jpg', title: 'Toco Toucan', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
 ];
 
 const CHART_COLORS = ['#f59e0b', '#06b6d4', '#8b5cf6', '#10b981', '#f43f5e', '#6366f1'];

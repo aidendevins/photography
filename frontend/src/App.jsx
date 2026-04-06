@@ -41,6 +41,7 @@ const ALL_PHOTOS = [
   { id: 35, src: '/bald-eagle.jpg', thumb: '/bald-eagle.jpg', title: 'Bald Eagle', location: 'Washington', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 37, src: '/santa-teresa.jpg', thumb: '/santa-teresa.jpg', title: 'Santa Teresa', location: 'Santa Teresa, Rio de Janeiro, Brazil', category: 'urban', author: 'Aiden' },
   { id: 38, src: '/palermo-ba.jpg', thumb: '/palermo-ba.jpg', title: 'Palermo Buenos Aires', location: 'Palermo, Buenos Aires, Argentina', category: 'urban', author: 'Aiden' },
+  { id: 39, src: '/toco-toucan.jpg', thumb: '/toco-toucan.jpg', title: 'Toco Toucan', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
