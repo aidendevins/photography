@@ -43,6 +43,7 @@ const ALL_PHOTOS = [
   { id: 38, src: '/palermo-ba.jpg', thumb: '/palermo-ba.jpg', title: 'Palermo Buenos Aires', location: 'Palermo, Buenos Aires, Argentina', category: 'urban', author: 'Aiden' },
   { id: 39, src: '/toco-toucan.jpg', thumb: '/toco-toucan.jpg', title: 'Toco Toucan', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
   { id: 40, src: '/diaethria.jpg', thumb: '/diaethria.jpg', title: 'Diaethria', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
+  { id: 41, src: '/biblis-hyperia.jpg', thumb: '/biblis-hyperia.jpg', title: 'Biblis Hyperia', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
