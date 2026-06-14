@@ -53,7 +53,6 @@ const ALL_PHOTOS = [
   { id: 31, thumb: '/lewis-lake-v2.jpg', title: 'Lewis Lake II', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
   { id: 32, thumb: '/lewis-lake-v3.jpg', title: 'Lewis Lake III', location: 'Yellowstone National Park, Wyoming', category: 'landscapes', author: 'Aiden' },
   { id: 33, thumb: '/wing-lake-sunset.jpg', title: 'Wing Lake Sunset', location: 'Alpine Lakes Wilderness, Washington', category: 'landscapes', author: 'Aiden' },
-  { id: 34, thumb: '/pelicans.jpg', title: 'Pelicans', location: 'Yellowstone National Park, Wyoming', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 35, thumb: '/bald-eagle.jpg', title: 'Bald Eagle', location: 'Washington', category: 'wildlife', author: 'Kaitlin & Aiden' },
   { id: 37, thumb: '/santa-teresa.jpg', title: 'Santa Teresa', location: 'Santa Teresa, Rio de Janeiro, Brazil', category: 'urban', author: 'Aiden' },
   { id: 38, thumb: '/palermo-ba.jpg', title: 'Palermo Buenos Aires', location: 'Palermo, Buenos Aires, Argentina', category: 'urban', author: 'Aiden' },
