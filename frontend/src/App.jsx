@@ -45,6 +45,7 @@ const ALL_PHOTOS = [
   { id: 41, src: '/biblis-hyperia.jpg', thumb: '/biblis-hyperia.jpg', title: 'Biblis Hyperia', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
   { id: 42, src: '/cyanocorax-chrysops.jpg', thumb: '/cyanocorax-chrysops.jpg', title: 'Cyanocorax Chrysops', location: 'Iguazu Falls, Argentina', category: 'wildlife', author: 'Aiden' },
   { id: 43, src: '/ursa-beach.jpg', thumb: '/ursa-beach.jpg', title: 'Ursa Beach', location: 'Sintra, Portugal', category: 'landscapes', author: 'Aiden' },
+  { id: 44, src: '/boulder-beach.jpg', thumb: '/boulder-beach.jpg', title: 'Boulder Beach', location: 'Acadia National Park, Maine', category: 'waterscape', author: 'Aiden' },
 ];
 
 const HERO_IMAGE = '/hero.jpg';
@@ -55,6 +56,7 @@ const CATEGORIES = [
   { id: 'wildlife', label: 'Wildlife' },
   { id: 'urban', label: 'Urban' },
   { id: 'unique', label: 'Unique' },
+  { id: 'waterscape', label: 'Waterscape' },
   { id: 'all', label: 'All' },
 ];
 
